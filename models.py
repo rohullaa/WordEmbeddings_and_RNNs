@@ -68,6 +68,7 @@ class ClassifierRNNs(nn.Module):
 
 
     def forward(self, x, length, device):
+        x = x.to(device)
         x = self.embedder(x).to(device)
 
         packed = nn.utils.rnn.pack_padded_sequence(x, length, batch_first=True,enforce_sorted=False)
