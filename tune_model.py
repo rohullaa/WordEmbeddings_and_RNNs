@@ -39,7 +39,6 @@ def make_lemmatised(df, args):
 
 def run_model():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    train_iter, val_iter, vec_model = load_data(args)
     model = {
         "RNNs": ClassifierRNNs,
         "FFNN": ClassifierMLP
@@ -143,6 +142,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     logger.info(args)
 
+    train_iter, val_iter, vec_model = load_data(args)
 
     if args.model == "FFNN": 
         grid_search_ffnn()
