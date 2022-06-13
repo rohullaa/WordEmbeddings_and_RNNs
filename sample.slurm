@@ -6,6 +6,8 @@
 #SBATCH --nodes=1
 #SBATCH --mem-per-cpu=8G
 #SBATCH --ntasks-per-node=3
+#SBATCH --gpus=1
+#SBATCH --partition=accel
 
 set -o errexit
 set -o nounset

@@ -84,11 +84,12 @@ if __name__ == "__main__":
 
     logger.info(args)
 
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     train_iter, val_iter, vec_model = load_data(args)
     model = {
         "RNNs": ClassifierRNNs,
         "FFNN": ClassifierMLP
-    }[args.model](args,vec_model)
+    }[args.model](args,vec_model).to(device)
 
     criterion = nn.CrossEntropyLoss()
     optimizer = AdamW(model.parameters(), lr=args.lr)
@@ -96,11 +97,11 @@ if __name__ == "__main__":
 
 
     for epoch in range(args.epochs):
-        loss = train(model, criterion, train_iter, optimizer)
+        loss = train(model, criterion, train_iter, optimizer,device)
         scheduler.step()
 
-        train_acc = evaluate(model, train_iter)
-        test_acc = evaluate(model, val_iter)
+        train_acc = evaluate(model, train_iter,device)
+        test_acc = evaluate(model, val_iter,device)
 
         logger.info(f"Epoch: {epoch+1:.2f} - Train accuracy: {train_acc} - Test accuracy: {test_acc} - Loss: {loss}\n")
 
