@@ -60,7 +60,7 @@ def run_model():
         logger.info(f"Epoch: {epoch+1:.2f} - Train accuracy: {train_acc} - Test accuracy: {test_acc}")
 
 
-def grid_search_ffnn(args, list_zip_files=["82.zip", "40.zip"]):
+def grid_search_ffnn():
     for lr in [1e-3]:
         args.lr = lr
         for hidden_dim in [16,32,64]:
@@ -69,7 +69,7 @@ def grid_search_ffnn(args, list_zip_files=["82.zip", "40.zip"]):
                 args.n_hidden_layers = n_hidden_layers
                 for compose_word_rep in ["mean","sum"]:
                     args.compose_word_rep = compose_word_rep
-                    for zip_file in list_zip_files:
+                    for zip_file in ["82.zip", "40.zip"]:
                         args.zip_file = zip_file
 
                         if args.zip_file == "40.zip":
