@@ -66,7 +66,7 @@ if __name__ == "__main__":
     parser.add_argument("--model", default="RNNs") #RNNs or FFNN
     parser.add_argument("--rnn_type", default="RNN") ## Simple RNN, LSTM or GRU
     parser.add_argument("--input_size", action="store", type=int, default=100)
-    parser.add_argument("--hidden_dim", action="store", type=int, default=50)
+    parser.add_argument("--hidden_dim", action="store", type=int, default=200)
     parser.add_argument("--n_hidden_layers", action="store", type=int, default=3)
     parser.add_argument("--batch_size", action="store", type=int, default=32)
     parser.add_argument("--lr", action="store", type=float, default=1e-2)
