@@ -72,7 +72,6 @@ if __name__ == "__main__":
     parser.add_argument("--lr", action="store", type=float, default=1e-2)
     parser.add_argument("--epochs", action="store", type=int, default=50)
     parser.add_argument("--split", action="store", type=float, default=0.9)
-    parser.add_argument("--gamma", action="store", type=float, default=0.9)
     parser.add_argument("--zip_file", default="40.zip")
     parser.add_argument("--grid_search", action="store", type=bool, default=False)  
     parser.add_argument("--compose_word_rep", default="mean") #mean or sum for FFNN
@@ -92,7 +91,7 @@ if __name__ == "__main__":
 
     criterion = nn.CrossEntropyLoss()
     optimizer = AdamW(model.parameters(), lr=args.lr)
-    scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=args.gamma)
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, args.epochs * len(train_iter))
 
 
     for epoch in range(args.epochs):
