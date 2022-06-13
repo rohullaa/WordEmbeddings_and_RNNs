@@ -60,7 +60,7 @@ def run_model():
         logger.info(f"Epoch: {epoch+1:.2f} - Train accuracy: {train_acc} - Test accuracy: {test_acc}")
 
         if args.model == "RNNs": 
-            if epoch == 10 and test_acc < 0.65:
+            if epoch == 7 and test_acc < 0.65:
                 break
 
 def grid_search_ffnn():
