@@ -24,7 +24,7 @@ def train(model: nn.Module, criterion: nn.Module, train_iter: DataLoader, optimi
 
 
 @torch.no_grad()
-def evaluate(model: nn.Module, data_iter: DataLoader, labels: Optional[List[str]] = None):
+def evaluate(device: torch.device, model: nn.Module, data_iter: DataLoader, labels: Optional[List[str]] = None):
     model.eval()
     labels_true, predictions = [], []
     for feature_vector,length,label_true in tqdm.tqdm(data_iter):

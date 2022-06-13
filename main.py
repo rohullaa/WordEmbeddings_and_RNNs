@@ -100,8 +100,8 @@ if __name__ == "__main__":
         loss = train(model, criterion, train_iter, optimizer,device)
         scheduler.step()
 
-        train_acc = evaluate(model, train_iter,device)
-        test_acc = evaluate(model, val_iter,device)
+        train_acc = evaluate(device, model, train_iter)
+        test_acc = evaluate(device, model, val_iter)
 
         logger.info(f"Epoch: {epoch+1:.2f} - Train accuracy: {train_acc} - Test accuracy: {test_acc} - Loss: {loss}\n")
 
