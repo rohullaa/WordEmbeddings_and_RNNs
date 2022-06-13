@@ -15,8 +15,9 @@ class ClassifierMLP(nn.Module):
         ])
         self.output_layer = nn.Linear(args.hidden_dim, 2)
 
-    def forward(self, x, length):
-        x = self.embedder(x)
+    def forward(self, x, length, device):
+        x = x.to(device)
+        x = self.embedder(x).to(device)
         if self.compose_word_rep == "mean":
             x = torch.mean(x, dim=1).relu()
         elif self.compose_word_rep == "sum":
