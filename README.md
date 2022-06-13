@@ -37,3 +37,11 @@ python3 tune_model.py --path PATH
                     --zip_file ZIP_FILE
                     --data_type DATA_TYPE
 ```
+
+## Requirements
+
+1. Python3
+2. sklearn  ```pip install -U scikit-learn```
+3. Pytorch ```pip install torch ```
+4. tqdm ```pip install tqdm```
+5. gensim ```pip install gensim```
