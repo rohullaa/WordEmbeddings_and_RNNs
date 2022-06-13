@@ -18,4 +18,4 @@ module load nlpl-nlptools/2021.01-gomkl-2019b-Python-3.7.4
 module load nlpl-pytorch/1.7.1-gomkl-2019b-cuda-10.1.243-Python-3.7.4
 module load nlpl-gensim/3.8.3-gomkl-2019b-Python-3.7.4
 
-python3 main.py 
+python3 tune_model.py 
