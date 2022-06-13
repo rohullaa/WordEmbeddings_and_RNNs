@@ -64,7 +64,7 @@ if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--path", default="data/stanford_sentiment_binary.tsv.gz")
     parser.add_argument("--model", default="RNNs") #RNNs or FFNN
-    parser.add_argument("--rnn_type", default="GRU") ## Simple RNN, LSTM or GRU
+    parser.add_argument("--rnn_type", default="LSTM") ## Simple RNN, LSTM or GRU
     parser.add_argument("--input_size", action="store", type=int, default=100)
     parser.add_argument("--hidden_dim", action="store", type=int, default=50)
     parser.add_argument("--n_hidden_layers", action="store", type=int, default=1)
