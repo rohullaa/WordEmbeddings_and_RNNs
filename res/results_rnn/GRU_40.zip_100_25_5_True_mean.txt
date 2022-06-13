@@ -1,0 +1,31 @@
+PARAMETERS: 
+
+Input_size: 100 , hidden_size: 25, num_layers: 5 
+Learning rate: 0.01, n_epochs: 60
+Zip file: 40.zip
+Model: RNNs,  Bidirectional: True , Dropout: 0.0
+Type RNN: GRU 
+_________________________________________________________________________________________________
+Epoch: 1.00 - Train accuracy: 0.6185458377239199 - Test accuracy: 0.6021650879566982 - Loss: 0.7702233195304871
+Epoch: 2.00 - Train accuracy: 0.6984796025891916 - Test accuracy: 0.6332882273342354 - Loss: 0.8045057058334351
+Epoch: 3.00 - Train accuracy: 0.6996838777660696 - Test accuracy: 0.6562922868741543 - Loss: 0.6438092589378357
+Epoch: 4.00 - Train accuracy: 0.7234683125094084 - Test accuracy: 0.6887686062246279 - Loss: 0.6090870499610901
+Epoch: 5.00 - Train accuracy: 0.7302423603793466 - Test accuracy: 0.6698240866035182 - Loss: 0.4355999231338501
+Epoch: 6.00 - Train accuracy: 0.7964774951076321 - Test accuracy: 0.6887686062246279 - Loss: 0.5605419278144836
+Epoch: 7.00 - Train accuracy: 0.8061116965226555 - Test accuracy: 0.6968876860622463 - Loss: 0.6351575255393982
+Epoch: 8.00 - Train accuracy: 0.8366701791359326 - Test accuracy: 0.7117726657645467 - Loss: 0.6012396812438965
+Epoch: 9.00 - Train accuracy: 0.8621104922474786 - Test accuracy: 0.7077131258457375 - Loss: 0.5018654465675354
+Epoch: 10.00 - Train accuracy: 0.8929700436549751 - Test accuracy: 0.7185385656292287 - Loss: 0.27430304884910583
+Epoch: 11.00 - Train accuracy: 0.9164534096040945 - Test accuracy: 0.7496617050067659 - Loss: 0.28523144125938416
+Epoch: 12.00 - Train accuracy: 0.9054643986150835 - Test accuracy: 0.7198917456021651 - Loss: 0.6060457229614258
+Epoch: 13.00 - Train accuracy: 0.9452054794520548 - Test accuracy: 0.7185385656292287 - Loss: 0.7329304218292236
+Epoch: 14.00 - Train accuracy: 0.938732500376336 - Test accuracy: 0.7239512855209743 - Loss: 0.12252367287874222
+Epoch: 15.00 - Train accuracy: 0.9712479301520397 - Test accuracy: 0.7456021650879567 - Loss: 0.02622750774025917
+Epoch: 16.00 - Train accuracy: 0.9801294595815144 - Test accuracy: 0.7347767253044655 - Loss: 0.09466554969549179
+Epoch: 17.00 - Train accuracy: 0.9872045762456721 - Test accuracy: 0.7401894451962111 - Loss: 0.025081098079681396
+Epoch: 18.00 - Train accuracy: 0.9900647297907572 - Test accuracy: 0.7293640054127198 - Loss: 0.04667791724205017
+Epoch: 19.00 - Train accuracy: 0.9944302273069396 - Test accuracy: 0.7388362652232747 - Loss: 0.058135855942964554
+Epoch: 20.00 - Train accuracy: 0.9954839680867078 - Test accuracy: 0.7253044654939107 - Loss: 0.03278588503599167
+Epoch: 21.00 - Train accuracy: 0.9971398464549149 - Test accuracy: 0.7280108254397835 - Loss: 0.03068297728896141
+Epoch: 22.00 - Train accuracy: 0.9971398464549149 - Test accuracy: 0.7334235453315291 - Loss: 0.014206429943442345
+Epoch: 23.00 - Train accuracy: 0.9983441216317929 - Test accuracy: 0.7388362652232747 - Loss: 0.004180814605206251
