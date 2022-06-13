@@ -78,10 +78,9 @@ if __name__ == "__main__":
     parser.add_argument("--compose_word_rep", default="mean") #mean or sum for FFNN
     parser.add_argument("--data_type", default="raw") #raw, lemmatized or POS-tagged    
     parser.add_argument("--bidirectional",type=bool, default=False) #true or false
-    parser.add_argument("--dropout",type=float, default=0.0) #float between 0 and 1
+    parser.add_argument("--dropout",type=float, default=0.2) #float between 0 and 1
     parser.add_argument("--which_state", default="max") #last, max or mean
     args = parser.parse_args()
-
     logger.info(args)
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
