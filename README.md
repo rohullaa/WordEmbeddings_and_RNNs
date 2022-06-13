@@ -24,3 +24,16 @@ python3 main.py --path [path to data]
                 --dropout DROPOUT
                 --compose_word_rep [mean or sum for FFNN model]
 ```
+Fine-tune the hyperparameters of the models:
+
+```
+python3 tune_model.py --path PATH
+                    --model MODEL
+                    --input_size INPUT_SIZE
+                    --batch_size BATCH_SIZE
+                    --lr LR
+                    --epochs EPOCHS
+                    --split SPLIT
+                    --zip_file ZIP_FILE
+                    --data_type DATA_TYPE
+```
