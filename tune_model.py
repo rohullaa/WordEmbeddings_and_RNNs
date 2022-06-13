@@ -48,7 +48,8 @@ def run_model():
     criterion = nn.CrossEntropyLoss()
     optimizer = AdamW(model.parameters(), lr=args.lr)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, args.epochs * len(train_iter))
-
+    last_test_acc = 0
+    patience = 4
 
     for epoch in range(args.epochs):
         loss = train(model, criterion, train_iter, optimizer,device)
@@ -62,6 +63,16 @@ def run_model():
         if args.model == "RNNs": 
             if epoch == 10 and test_acc < 0.6:
                 break
+        
+        # Early stopping
+        if last_test_acc > test_acc:
+            trigger_times += 1
+            if trigger_times >= patience:
+                break
+        else:
+            trigger_times = 0
+
+        last_test_acc = test_acc
 
 def grid_search_ffnn():
     for lr in [1e-3]:
