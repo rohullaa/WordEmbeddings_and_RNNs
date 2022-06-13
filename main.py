@@ -78,7 +78,7 @@ if __name__ == "__main__":
     parser.add_argument("--data_type", default="raw") #raw, lemmatized or POS-tagged    
     parser.add_argument("--bidirectional",type=bool, default=True) #true or false
     parser.add_argument("--dropout",type=float, default=0.1) #float between 0 and 1
-    parser.add_argument("--which_state", default="max") #last, max or mean
+    parser.add_argument("--which_state", default="mean") #last, max or mean
     args = parser.parse_args()
     logger.info(args)
 
