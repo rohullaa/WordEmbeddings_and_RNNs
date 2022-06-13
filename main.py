@@ -13,7 +13,7 @@ import numpy as np
 from dataset import SSTDataset
 from models import ClassifierMLP,ClassifierRNNs
 from load_embed import load_embedding
-from evaluate import evaluate, train
+from evaluate import evaluate, train, pad_batches
 
 def seed_everything(seed_value=5550):
     os.environ['PYTHONHASHSEED'] = str(seed_value)
