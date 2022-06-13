@@ -100,24 +100,22 @@ def grid_search_rnn():
             for bidirectional in [True, False]:
                 for dropout in [0,0.1,0.2]:
                     for hidden_dim in [25,50,100]:
-                        for input_size in [100, 200]:
-                            for num_layers in range(1,5):
-                                args.rnn_type = rnn_type
-                                args.which_state = which_state
-                                args.bidirectional = bidirectional
-                                args.hidden_dim = hidden_dim
-                                args.input_size = input_size
-                                args.n_hidden_layers = num_layers
-                                args.dropout = dropout
-                                run_model()
+                        for num_layers in range(1,5):
+                            args.rnn_type = rnn_type
+                            args.which_state = which_state
+                            args.bidirectional = bidirectional
+                            args.hidden_dim = hidden_dim
+                            args.n_hidden_layers = num_layers
+                            args.dropout = dropout
+                            run_model()
 
-                                # if best_acc > acc:
-                                #     acc = best_acc
-                                #     state_dict = {
-                                #     'model': model.state_dict(),
-                                #     'training_args': args
-                                #     }
-                                #     torch.save(state_dict, name)
+                            # if best_acc > acc:
+                            #     acc = best_acc
+                            #     state_dict = {
+                            #     'model': model.state_dict(),
+                            #     'training_args': args
+                            #     }
+                            #     torch.save(state_dict, name)
 
 def load_data(args):
     print("Loading the dataset...")
