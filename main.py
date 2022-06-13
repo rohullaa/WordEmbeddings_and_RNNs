@@ -82,6 +82,8 @@ if __name__ == "__main__":
     parser.add_argument("--which_state", default="max") #last, max or mean
     args = parser.parse_args()
 
+    logger.info(args)
+
     train_iter, val_iter, vec_model = load_data(args)
     model = {
         "RNNs": ClassifierRNNs,
