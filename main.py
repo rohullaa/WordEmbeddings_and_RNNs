@@ -66,8 +66,8 @@ if __name__ == "__main__":
     parser.add_argument("--model", default="RNNs") #RNNs or FFNN
     parser.add_argument("--rnn_type", default="GRU") ## Simple RNN, LSTM or GRU
     parser.add_argument("--input_size", action="store", type=int, default=100)
-    parser.add_argument("--hidden_dim", action="store", type=int, default=25)
-    parser.add_argument("--n_hidden_layers", action="store", type=int, default=3)
+    parser.add_argument("--hidden_dim", action="store", type=int, default=100)
+    parser.add_argument("--n_hidden_layers", action="store", type=int, default=1)
     parser.add_argument("--batch_size", action="store", type=int, default=64)
     parser.add_argument("--lr", action="store", type=float, default=1e-2)
     parser.add_argument("--epochs", action="store", type=int, default=50)
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     parser.add_argument("--compose_word_rep", default="mean") #mean or sum for FFNN
     parser.add_argument("--data_type", default="raw") #raw, lemmatized or POS-tagged    
     parser.add_argument("--bidirectional",type=bool, default=True) #true or false
-    parser.add_argument("--dropout",type=float, default=0.2) #float between 0 and 1
+    parser.add_argument("--dropout",type=float, default=0.1) #float between 0 and 1
     parser.add_argument("--which_state", default="max") #last, max or mean
     args = parser.parse_args()
     logger.info(args)
