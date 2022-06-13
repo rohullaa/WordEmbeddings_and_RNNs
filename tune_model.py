@@ -131,7 +131,7 @@ if __name__ == "__main__":
 
     parser = ArgumentParser()
     parser.add_argument("--path", default="data/stanford_sentiment_binary.tsv.gz")
-    parser.add_argument("--model", default="FFNN") #RNNs or FFNN
+    parser.add_argument("--model", default="RNNs") #RNNs or FFNN
     parser.add_argument("--batch_size", action="store", type=int, default=64)
     parser.add_argument("--lr", action="store", type=float, default=1e-2)
     parser.add_argument("--epochs", action="store", type=int, default=50)
