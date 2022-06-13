@@ -28,7 +28,7 @@ def evaluate(model: nn.Module, data_iter: DataLoader, labels: Optional[List[str]
     model.eval()
     labels_true, predictions = [], []
     for feature_vector,length,label_true in tqdm.tqdm(data_iter):
-        output = model(feature_vector,length)
+        output = model(feature_vector,length,device)
         predictions += output.argmax(dim=1).tolist()
         labels_true += label_true.tolist()
 
