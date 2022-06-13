@@ -38,6 +38,7 @@ def make_lemmatised(df, args):
     return df
 
 def run_model():
+    logger.info(args)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = {
         "RNNs": ClassifierRNNs,
@@ -140,8 +141,7 @@ if __name__ == "__main__":
     parser.add_argument("--zip_file", default="40.zip")
     parser.add_argument("--data_type", default="raw") #raw, lemmatized or POS-tagged    
     args = parser.parse_args()
-    logger.info(args)
-
+    
     train_iter, val_iter, vec_model = load_data(args)
 
     if args.model == "FFNN": 
