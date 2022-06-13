@@ -95,7 +95,7 @@ def grid_search_ffnn():
 
 
 def grid_search_rnn():
-    for rnn_type in ["RNN", "LSTM", "GRU"]:
+    for rnn_type in ["GRU","RNN", "LSTM"]:
         for which_state in ["last", "max" "mean"]:
             for bidirectional in [True, False]:
                 for dropout in [0,0.1,0.2]:
