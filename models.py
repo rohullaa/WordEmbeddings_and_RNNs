@@ -67,8 +67,8 @@ class ClassifierRNNs(nn.Module):
             self.fc = nn.Linear(args.hidden_dim, 2)
 
 
-    def forward(self, x, length):
-        x = self.embedder(x)
+    def forward(self, x, length, device):
+        x = self.embedder(x).to(device)
 
         packed = nn.utils.rnn.pack_padded_sequence(x, length, batch_first=True,enforce_sorted=False)
         #hidden = torch.zeros(self.n_hidden_layers,x.size(0),self.hidden_dim)

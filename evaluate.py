@@ -15,7 +15,7 @@ def train(model: nn.Module, criterion: nn.Module, train_iter: DataLoader, optimi
     for feature_vector,length,label_true in tqdm.tqdm(train_iter):
         optimizer.zero_grad()
         label_true = torch.squeeze(label_true).to(device)
-        label_pred = model(feature_vector, length)
+        label_pred = model(feature_vector, length, device)
         loss = criterion(label_pred, label_true)
         loss.backward()
         optimizer.step()
