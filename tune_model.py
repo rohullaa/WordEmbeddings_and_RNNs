@@ -10,10 +10,10 @@ import pandas as pd
 import random, os, logging
 import numpy as np
 
-from dataset import SSTDataset
-from models import ClassifierMLP,ClassifierRNNs
-from load_embed import load_embedding
-from evaluate import evaluate, train, pad_batches
+from src.dataset import SSTDataset
+from src.models import ClassifierMLP,ClassifierRNNs
+from src.load_embed import load_embedding
+from src.evaluate import evaluate, train, pad_batches
 
 def seed_everything(seed_value=5550):
     os.environ['PYTHONHASHSEED'] = str(seed_value)

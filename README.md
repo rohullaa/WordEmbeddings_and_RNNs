@@ -24,3 +24,24 @@ python3 main.py --path [path to data]
                 --dropout DROPOUT
                 --compose_word_rep [mean or sum for FFNN model]
 ```
+Fine-tune the hyperparameters of the models:
+
+```
+python3 tune_model.py --path PATH
+                    --model MODEL
+                    --input_size INPUT_SIZE
+                    --batch_size BATCH_SIZE
+                    --lr LR
+                    --epochs EPOCHS
+                    --split SPLIT
+                    --zip_file ZIP_FILE
+                    --data_type DATA_TYPE
+```
+
+## Requirements
+
+1. Python3
+2. sklearn  ```pip install -U scikit-learn```
+3. Pytorch ```pip install torch ```
+4. tqdm ```pip install tqdm```
+5. gensim ```pip install gensim```
