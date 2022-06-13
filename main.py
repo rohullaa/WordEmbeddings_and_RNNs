@@ -73,7 +73,6 @@ if __name__ == "__main__":
     parser.add_argument("--epochs", action="store", type=int, default=50)
     parser.add_argument("--split", action="store", type=float, default=0.9)
     parser.add_argument("--zip_file", default="40.zip")
-    parser.add_argument("--grid_search", action="store", type=bool, default=False)  
     parser.add_argument("--compose_word_rep", default="mean") #mean or sum for FFNN
     parser.add_argument("--data_type", default="raw") #raw, lemmatized or POS-tagged    
     parser.add_argument("--bidirectional",type=bool, default=True) #true or false
