@@ -27,7 +27,7 @@ python3 main.py --path [path to data]
 Fine-tune the hyperparameters of the models:
 
 ```
-python3 tune_model.py --path PATH
+python3 src/tune_model.py --path PATH
                     --model MODEL
                     --input_size INPUT_SIZE
                     --batch_size BATCH_SIZE
